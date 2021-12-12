@@ -43,13 +43,8 @@ export function ErrorBoundary({ error }) {
     <Document title="Error!">
       <Layout>
         <div>
-          <h1>There was an error</h1>
+          <h1>Se produjo un error</h1>
           <p>{error.message}</p>
-          <hr />
-          <p>
-            Hey, developer, you should replace this with what you want your
-            users to see.
-          </p>
         </div>
       </Layout>
     </Document>
@@ -72,7 +67,7 @@ export function CatchBoundary() {
       break;
     case 404:
       message = (
-        <p>Oops! Looks like you tried to visit a page that does not exist.</p>
+        <p>La página que buscas no está disponible</p>
       );
       break;
 
@@ -123,13 +118,7 @@ function Layout({ children }) {
           <nav aria-label="Main navigation" className="remix-app__header-nav">
             <ul>
               <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <a href="https://remix.run/docs">Remix Docs</a>
-              </li>
-              <li>
-                <a href="https://github.com/remix-run/remix">GitHub</a>
+                <Link to="/">Inicio</Link>
               </li>
 
               <li>
@@ -144,7 +133,7 @@ function Layout({ children }) {
       </div>
       <footer className="remix-app__footer">
         <div className="container remix-app__footer-content">
-          <p>&copy; You!</p>
+          <p>&copy; Remix demo by <a href="https://github.com/FranciscoCoya" target="_blank">Francisco Coya</a></p>
         </div>
       </footer>
     </div>
