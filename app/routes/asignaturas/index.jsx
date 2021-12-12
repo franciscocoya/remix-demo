@@ -1,6 +1,6 @@
 import { useLoaderData } from "remix";
 
-import * as data from "./asignaturas.json";
+//import * as data from "./asignaturas.json";
 
 export const loader = () => {
   return [
