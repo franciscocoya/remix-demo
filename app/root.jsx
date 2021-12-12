@@ -131,6 +131,10 @@ function Layout({ children }) {
               <li>
                 <a href="https://github.com/remix-run/remix">GitHub</a>
               </li>
+
+              <li>
+                <Link to="/asignaturas">Asignaturas</Link>
+              </li>
             </ul>
           </nav>
         </div>
