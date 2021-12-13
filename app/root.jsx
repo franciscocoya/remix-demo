@@ -12,6 +12,9 @@ import {
 import globalStylesUrl from "~/styles/global.css";
 import darkStylesUrl from "~/styles/dark.css";
 
+// Chakra UI 
+//import { ChakraProvider } from '@chakra-ui/react'
+
 // https://remix.run/api/app#links
 export let links = () => {
   return [
@@ -123,6 +126,10 @@ function Layout({ children }) {
 
               <li>
                 <Link to="/asignaturas">Asignaturas</Link>
+              </li>
+
+              <li>
+                <Link to="/administrador">Administrador</Link>
               </li>
             </ul>
           </nav>
