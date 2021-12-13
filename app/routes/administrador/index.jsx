@@ -1,16 +1,25 @@
-import { useLoaderData } from "remix";
-import { getAdministrador } from "~/administrador";
+import { Link } from "remix";
 
-export const loader = () => {
-  return getAdministrador();
+
+const Panel = () => {
+  return (
+    <>
+      <ul>
+        <li><Link to="/administrador/addAsignatura">Añadir una asignatura</Link></li>
+        <li><Link to="/asignaturas/edit">Modificar una asignatura</Link></li>
+        <li><Link to="/administrador/list">Listar todas las asignaturas</Link></li>
+        <li><Link to="/asignaturas/delete/:id">Eliminar una asignatura</Link></li>
+      </ul>
+    </>
+  );
 };
 
 export default function Administrador() {
-  const admin = useLoaderData();
+
   return (
     <>
-      <h1>{admin.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: admin.html }} />
+      <h1>Menú</h1>
+      <Panel />
     </>
   );
 };
