@@ -6,9 +6,9 @@ const Panel = () => {
     <>
       <ul>
         <li><Link to="/administrador/addAsignatura">Añadir una asignatura</Link></li>
-        <li><Link to="/asignaturas/edit">Modificar una asignatura</Link></li>
+        {/* <li><Link to="/administrador/edit">Modificar una asignatura</Link></li> */}
         <li><Link to="/administrador/list">Listar todas las asignaturas</Link></li>
-        <li><Link to="/asignaturas/delete/:id">Eliminar una asignatura</Link></li>
+        {/* <li><Link to="/asignaturas/delete/:id">Eliminar una asignatura</Link></li> */}
       </ul>
     </>
   );

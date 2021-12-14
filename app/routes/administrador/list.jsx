@@ -1,5 +1,8 @@
 import { db } from "~/utils/db.server";
-import { useLoaderData, useTransition } from "remix";
+import { useLoaderData, Link } from "remix";
+
+import { faEdit, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export let loader = async () => {
   const data = await db.asignatura.findMany();
@@ -9,7 +12,7 @@ export let loader = async () => {
 const ListItem = ({ props }) => {
   return (
     <li>
-      {props.denominacion}
+      {props.denominacion} <Link to={`/administrador/edit:${props.id}`}><FontAwesomeIcon icon={faEdit} /></Link><FontAwesomeIcon icon={faTrashAlt} />
     </li>
 
   );
@@ -17,7 +20,7 @@ const ListItem = ({ props }) => {
 
 
 export default function ListadoAsignaturas() {
-  const transition = useTransition();
+  // const transition = useTransition();
   const data = useLoaderData();
 
   return (
