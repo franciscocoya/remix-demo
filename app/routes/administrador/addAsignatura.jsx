@@ -10,7 +10,7 @@ export async function action({ request }) {
   const curso = Number(res.get("curso"));
   const horas = Number(res.get("horas"));
 
-  console.log(typeof (curso));
+  // console.log(typeof (curso));
 
 
   // Introducir los datos de la asignatura en la tabla Asignatura
