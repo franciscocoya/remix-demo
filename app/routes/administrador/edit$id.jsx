@@ -31,7 +31,7 @@ export async function action({ request, params }) {
 
   const asigOrig = await getAsignaturaById(params.id);
 
-  const asigUpdated = await db.asignatura.update({
+  await db.asignatura.update({
     where: {
       id: asigOrig.id
     },
