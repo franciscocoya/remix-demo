@@ -8,7 +8,7 @@ import { marked } from 'marked';
 // Si el servidor es distinto de REMIX, añadir .. más a la ruta
 // const asigPath = path.join(__dirname, '../asignaturas');
 
-const asigPath = '.output/static';
+const asigPath = '../asignaturas';
 function isValidAsigAttributes(attributes) {
   return attributes?.title;
 }
