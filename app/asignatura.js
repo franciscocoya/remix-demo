@@ -6,8 +6,7 @@ import { marked } from 'marked';
 
 // Obtener el directorio de los archivos de las asignaturas -> ../asignaturas/
 // Si el servidor es distinto de REMIX, añadir .. más a la ruta
-const asigPath = path.join(__dirname, '../..', 'asignaturas');
-
+const asigPath = path.join(__dirname, '../asignaturas');
 function isValidAsigAttributes(attributes) {
   return attributes?.title;
 }
